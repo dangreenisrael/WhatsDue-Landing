@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>WhatsDue</title>
+    <!-- Bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Plugins -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"/>
+
+    <link rel="icon" type="image/png" href="icon.png" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        /* Check for mobile */
+        var ua = navigator.userAgent.toLowerCase();
+        var isIphone = ua.indexOf("iphone") > -1;
+        var isIpad = ua.indexOf("ipad") > -1;
+        var isAndroid = ua.indexOf("android") > -1;
+        if(isIphone || isIpad) {
+            window.location='https://itunes.apple.com/us/app/whatsdue-never-miss-another/id924662865';
+        }else if (isAndroid){
+            window.location = 'market://details?id=com.whatsdue.app';
+        }
+
+    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+    d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+    _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+    $.src='//v2.zopim.com/?2cNYEojBfOTKQSTbKcu0XusKJk9DgG2p';z.t=+new Date;$.
+    type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+    </script>
+    <!--End of Zopim Live Chat Script-->
+
+
+    <!-- Social Stuff -->
+    <meta property="og:title"
+          content="WhatsDue: Never Miss Another Assignment" />
+    <meta property="og:url"
+          content="http://whatsdueapp.com/" />
+    <meta property="og:image"
+          content="http://whatsdueapp.com/img/facebook-share.png" />
+    <meta property="og:description"
+          content="WhatsDue puts all of your due dates for all of your classes in 1 easy to use
+          todo list" />
+</head>
+<body>
+    <!-- Top Nav -->
+    <header id="top-nav">
+        <div class="row">
+            <div class="col-sm-1">
+                <img src="img/logo.png">
+            </div>
+            <div class="col-sm-1 col-md-2"></div>
+            <nav class="col-sm-10 col-md-9">
+                <ul>
+                    <li class="active">
+                        <a href="#download">
+                            Download Now
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End Top Nav -->
+    <main>
+
+    <!-- Splash -->
+    <section class="row" id="splash">
+        <div class="col-sm-7">
+            <h1>
+                WhatsDue
+            </h1>
+            <p>
+                Knowing your Due Dates just got easier
+            </p>
+            <hr>
+            <div class="row">
+                <div class="col-sm-12" id="store-badges">
+                    <a href="https://play.google.com/store/apps/details?id=com.whatsdue.app&hl=en">
+                        <img class="button" src="img/google-play-badge.png">
+                    </a>
+
+                    <a href="https://itunes.apple.com/us/app/whatsdue-never-miss-another/id924662865?mt=8">
+                        <img class="button" src="img/app-store-badge.png">
+                    </a>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <form action="php/form.php" id="phoneForm" class="form-horizontal" method="post" target="validation-iFrame">
+                            <div class="form-group">
+                                <div class="col-md-8 col-sm-10 col-xs-12">
+                                    <input type="text"
+                                           class="form-control"
+                                           name="phoneNumber"
+                                           id="phoneNumber"
+                                           placeholder="SMS me a download link &nbsp;&nbsp; (US numbers only)"
+                                            />
+                                    <div class="button">
+                                        <button type="submit" class="btn validation-button" disabled="disabled" data-target="#validationModal">
+                                        Send
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-sm-5 col-md-4">
+            <div class="video">
+                <img class="screen-shot" src="img/iphone-shell.png">
+                <video autoplay="autoplay" poster="img/ios-screenshot.png">
+                    <source src="video/iphone-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+    <!-- End Splash -->
+
+    <!-- Built for Everyone -->
+    <section class="row lined-pattern" id="students">
+        <div class="row">
+            <div class="centered">
+                <img class = "large-logo" src="img/logo-symmetrical.png">
+                <div class="middle-line-grey">
+                    <br/>
+                </div>
+                <header>
+                    <h2>
+                        Built For Students
+                    </h2>
+                    <p>
+                        We keep track of your due dates so you don't have to
+                    </p>
+                </header>
+            </div>
+        </div>
+        <div class="row container">
+            <div class="col-sm-3 ">
+                <section>
+                    <header>
+                        Dedicated to students
+                    </header>
+                    <p>
+                        We put all of the major classes at the schools we support in our system.  If you have a class
+                        that we don't have, email us and we'll add it.
+                    </p>
+                    <header>
+                        Up to date
+                    </header>
+                    <p>
+                        We take all the dates from your syllabus, but sometimes dates change.  If there is a change,
+                        email us and we'll update the system.  We'll also send a push notification to let everyone know.
+                    </p>
+                </section>
+            </div>
+            <div class="col-sm-6 devices">
+                <img class="screen-shot" src="img/iphone-screenshots.png">
+
+            </div>
+            <div class="col-sm-3">
+                <section>
+                    <header>
+                        Keep track of everything
+                    </header>
+                    <p>
+                        With all of your important dates in one app, you'll never have to dig through all of your syllabi again.
+
+                    </p>
+                    <header>
+                        Set reminders
+                    </header>
+                    <p>
+                        WhatsDue will remind you to do everything, all you have to do is tell it when.  Once set, a reminder
+                        will work for every assignment, and be automatically updated if there is a change.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </section>
+    <!-- End Built for Everyone -->
+
+    <!-- How it Works -->
+    <section class="row" id="how-it-works">
+        <header>
+            <h2>
+                Simply Simple, Simply Amazing
+            </h2>
+            <p>
+                <i>How WhatsDue Works</i>
+            </p>
+        </header>
+        <div class="container">
+            <figure class="col-sm-3">
+                <img src="/img/plus.png" alt="Add Assignments">
+                <figcaption>
+                    <h3>
+                        Add Courses
+                    </h3>
+                    <p>
+                        You can search for them by either professor or course name
+                    </p>
+                </figcaption>
+            </figure>
+            <div class="col-sm-1"></div>
+            <figure class="col-sm-3">
+                <img src="/img/check.png" alt="Complete Assignments">
+                <figcaption>
+                    <h3>
+                        Complete Assignments
+                    </h3>
+                    <p>
+                        With all of your assignments in one place, its easy to keep of top of them.
+                    </p>
+                </figcaption>
+            </figure>
+            <div class="col-sm-1"></div>
+            <figure class="col-sm-3">
+                <img src="/img/a-plus.png" alt="Achieve Greatness">
+                <figcaption>
+                    <h3>
+                        Achieve Greatness
+                    </h3>
+                    <p>
+                        Finish your assignments with time to spare, and go have some fun.
+                    </p>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+    <!-- End How it Works -->
+
+    <!-- Changing Things -->
+    <section class="row lined-pattern" id="team">
+        <div class="container">
+            <header class="">
+                <h2>
+                    The Team
+                </h2>
+            </header>
+            <div class="row top">
+                <div class="col-sm-4">
+                    <figure>
+                        <img class="img-circle" src="img/team/dan.jpg">
+                        <figcaption>
+                            <strong>
+                                Dan Green
+                            </strong>
+                            <br/>
+                            <small>
+                                <i>
+                                    Developer
+                                </i>
+                            </small>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-4">
+                    <figure>
+                        <img class="img-circle" src="img/team/aaron.jpg">
+                        <figcaption>
+                            <strong>
+                                Aaron Taylor
+                            </strong>
+                            <br/>
+                            <small>
+                                <i>
+                                    Growth
+                                </i>
+                            </small>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-4">
+                    <figure>
+                        <img class="img-circle" src="img/team/omer.jpg">
+                        <figcaption>
+                            <strong>
+                                Omer Segoly
+                            </strong>
+                            <br/>
+                            <small>
+                                <i>
+                                    Cloud Consultant
+                                </i>
+                            </small>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="row bottom">
+                <div class="col-sm-6">
+                    <figure>
+                        <img class="img-circle" src="img/team/brennan.jpg">
+                        <figcaption>
+                            <strong>
+                                Brennan Gleason
+                            </strong>
+                            <br/>
+                            <small>
+                                <i>
+                                    Designer
+                                </i>
+                            </small>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-6">
+                    <figure>
+                        <img class="img-circle" src="img/team/maoz.jpg">
+                        <figcaption>
+                            <strong>
+                                Maoz Kaufmann
+                            </strong>
+                            <br/>
+                            <small>
+                                <i>
+                                    Cloud Engineer
+                                </i>
+                            </small>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Changing Things-->
+
+    <!-- Price -->
+    <section class="row" id="price">
+        <header>
+            <h2>
+                So how much does it cost?
+            </h2>
+            <div>
+                <div class="price">$0.00</div>
+                <div class="description">Zip-Nada-Zilch</div>
+            </div>
+            <hr/>
+        </header>
+        <section>
+            <header>We believe in freedom</header>
+            <p>
+                We don't believe in charging you money or showing you annoying ads.<br/>
+                We intend to make money by offering people services they want,<br/>
+                like tutoring or exam prep classes.
+            </p>
+        </section>
+    </section>
+    <!-- End Price -->
+
+    <!-- Download -->
+    <section class="row white-background" id="download">
+        <div class="container">
+
+            <div class="buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.whatsdue.app&hl=en">
+                    <div class="android">
+                        <img src="img/google-play-badge.png">
+
+                    </div>
+                </a>
+                <a href="https://itunes.apple.com/us/app/whatsdue-never-miss-another/id924662865?mt=8">
+                    <div class="ios">
+                        <img src="img/app-store-badge.png">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End Download -->
+
+    <footer class="row white-background" id="main-footer">
+        <div class="container">
+            <div class="col-sm-4 col-md-4">
+                <ul>
+                    <li>
+                        FAQ
+                    </li>
+                    <a target="_blank" href="http://www.iubenda.com/privacy-policy/707146/legal">
+                        <li>
+                            Privacy Policy
+                        </li>
+                    </a>
+                    <li>
+                        Terms and Conditions
+                    </li>
+                    <a href="mailto:aaron@whatsdueapp.com">
+                        <li>
+                            Support
+                        </li>
+                    </a>
+                    <a href="mailto:aaron@whatsdueapp.com">
+                        <li>
+                            Contact Us
+                        </li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="col-sm-3 col-md-4 social">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/whatsdue" target="_blank">
+                            <img src="/img/facebook.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/whatsdue" target="_blank">
+                            <img src="/img/twitter.png">
+                        </a>
+                    </li>
+                    <li>
+                        <img src="/img/google-plus.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-5 col-md-4" >
+                <p>Subscribe to our newsletter</p>
+
+                <!-- Begin MailChimp Sign-up Form -->
+                <div id="mc_embed_signup">
+                    <form action="//tlvwebdevelopment.us7.list-manage.com/subscribe/post?u=d92e903af0b79c550c5b286cd&amp;id=ecc96722b3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                        <div id="mc_embed_signup_scroll">
+                            <div class="mc-field-group">
+                                <input type="email" value="" placeholder="Your Email Address..." name="EMAIL" class="required email" id="mce-EMAIL">
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;"><input type="text" name="b_d92e903af0b79c550c5b286cd_ecc96722b3" tabindex="-1" value=""></div>
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                        </div>
+                    </form>
+                </div>
+                <!--End MainChimp Sign-up Form-->
+            </div>
+        </div>
+    </footer>
+    </main>
+    <footer id="bottom-footer">
+        <div class="container">
+            <small>&copy;2015 WhatsDue</small>
+        </div>
+    </footer>
+
+    <div id="mobile" >
+        <img class="logo" src="/img/logo-text.png">
+        <div class="middle-line-grey">
+            <div class="left">
+                <p>I'm a Teacher</p>
+                <img src="/img/macbook-outline.png">
+            </div>
+            <div class="right">
+                <p>I'm a Student</p>
+                <img src="/img/iphone-outline.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="validationModal" tabindex="-1" role="dialog" aria-labelledby="validationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Prove you're a person</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe id="validation-iFrame" name="validation-iFrame" class="flat"> </iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+
+    <!-- jQuery Plugins -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-56128113-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,594 @@
+/*
+ * Site-wide
+ */
+@media all {
+  @font-face {
+    font-family: gibson;
+    src: url('/fonts/gibson.ttf');
+  }
+  @font-face {
+    font-family: gibson-light;
+    src: url('/fonts/gibson-light.ttf');
+  }
+  @font-face {
+    font-family: gibson-bold;
+    src: url('/fonts/gibson-bold.ttf');
+  }
+  body {
+    background-color: #333333;
+    background-image: url('/img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: gibson-light, sans-serif;
+  }
+  h1,
+  h2,
+  h3 {
+    text-transform: uppercase;
+    color: #000000;
+  }
+  h1 {
+    font-family: gibson-bold, sans-serif;
+  }
+  h2,
+  h3,
+  h4 {
+    font-family: gibson, sans-serif;
+  }
+  p {
+    color: #000000;
+    font-weight: 200;
+  }
+  .row {
+    max-width: 1170px;
+    margin: auto;
+    position: relative;
+  }
+  .green-text {
+    color: #98c03c;
+  }
+  .green-background {
+    background-color: #98c03c;
+  }
+  .white-background {
+    background-color: #ffffff;
+  }
+  a {
+    color: #ffffff;
+  }
+  .btn-green {
+    background-color: #98c03c;
+    border-color: #98c03c;
+    color: #ffffff;
+  }
+  img {
+    max-height: 100%;
+  }
+  .btn-white-outline {
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+  .btn-white-outline:hover {
+    color: #ffffff;
+  }
+  .middle-line-grey {
+    background-image: url("/img/vertical-line-grey.png");
+    background-position: center;
+    background-repeat: repeat-y;
+  }
+  .middle-line-white {
+    background-image: url("/img/vertical-line-white.png");
+    background-position: center;
+    background-repeat: repeat-y;
+  }
+  main > section {
+    padding: 50px 0;
+  }
+  .lined-pattern {
+    background-image: url("/img/lined-pattern.png");
+    background-size: 100px;
+  }
+  ::-webkit-input-placeholder {
+    color: #000000;
+    font-style: italic;
+  }
+  :-moz-placeholder {
+    color: #000000;
+    font-style: italic;
+  }
+  ::-moz-placeholder {
+    color: #000000;
+    font-style: italic;
+  }
+}
+@media all and (min-width: 1200px) {
+  .row .container {
+    padding: 40px 100px;
+  }
+}
+body {
+  padding-top: 50px;
+}
+#top-nav {
+  background-color: #ffffff;
+  opacity: 0;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  transition: opacity 0.4s;
+}
+#top-nav img {
+  height: 50px;
+  padding: 10px 0;
+}
+#top-nav ul {
+  float: right;
+}
+#top-nav ul li {
+  float: left;
+  list-style-type: none;
+  line-height: 50px;
+  font-size: 14px;
+  padding: 0 10px;
+  color: #000000;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+#top-nav ul li a {
+  color: #000000;
+}
+#top-nav ul li i {
+  color: #d2d4d3;
+  font-weight: 100;
+  text-transform: none;
+}
+#top-nav ul li.active {
+  background-color: #39bacd;
+  color: #ffffff;
+}
+#splash {
+  margin-top: 80px;
+  color: #ffffff;
+  padding: 0 50px;
+}
+#splash h1 {
+  font-size: 100px;
+  line-height: 85px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  letter-spacing: 5px;
+  color: white;
+  text-transform: none;
+}
+@media (max-width: 1020px) {
+  #splash h1 {
+    font-size: 80px;
+  }
+}
+#splash hr {
+  height: 2px;
+  width: 100px;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+}
+#splash p {
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#splash .row .col-sm-12 {
+  padding-left: 0;
+}
+#splash .row .col-sm-12 img.button {
+  height: 45px;
+  width: auto;
+}
+#splash .row .col-sm-12 a:last-child {
+  margin-left: 10px;
+}
+#splash div.video {
+  position: relative;
+  float: right;
+}
+#splash div.video img.screen-shot {
+  height: 500px;
+  margin-top: -50px;
+  z-index: 10;
+}
+@media (max-width: 769) {
+  #splash div.video img.screen-shot {
+    position: absolute;
+    bottom: 0;
+  }
+}
+#splash div.video video {
+  width: 215px;
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  z-index: -1;
+  background: none;
+}
+#splash #phoneForm {
+  margin-top: 20px;
+}
+#splash #phoneForm div.phone-number {
+  padding-right: 0;
+  margin-right: 0;
+}
+#splash #phoneForm input {
+  font-size: 18px;
+  height: 46px;
+}
+#splash #phoneForm input::-webkit-input-placeholder {
+  font-size: 12px;
+  line-height: 28px;
+}
+#splash #phoneForm i {
+  right: 100px;
+  padding-top: 5px;
+}
+#splash #phoneForm .button {
+  margin-left: 100%;
+  margin-top: -40px;
+}
+#splash #phoneForm .button button {
+  height: 34px;
+  left: -20px;
+  width: 80px;
+  margin-left: -88px;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background: #98c03c;
+}
+#students {
+  padding-top: 0;
+  width: 100%;
+  padding-bottom: 0;
+}
+#students p {
+  font-size: 16px;
+}
+#students .col-sm-3 {
+  margin-top: 10px;
+}
+#students header {
+  font-size: 18px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+#students .centered {
+  width: 400px;
+  margin: 50px auto 10px;
+  display: block;
+  text-align: center;
+}
+#students .centered img.large-logo {
+  width: 50%;
+  margin: 0 25%;
+  opacity: 1;
+  padding-bottom: 10px;
+}
+#students .centered h2 {
+  font-size: 22px;
+  color: #000000;
+  font-weight: 900;
+}
+#students .divider {
+  height: 80px;
+  padding-top: 40px;
+}
+#students .divider > div {
+  width: 48%;
+  border-bottom: dashed 2px #000000;
+  float: left;
+}
+#students .divider .left {
+  margin-right: 2%;
+}
+#students .divider .right {
+  margin-left: 52%;
+}
+#students .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#students .container section {
+  padding-top: 40px;
+}
+#students .container > div {
+  padding: 0;
+}
+#students .container img {
+  float: left;
+  width: 60%;
+  margin-left: 20%;
+}
+#students .container img:first-child {
+  padding-right: 1px;
+}
+#students .container img:nth-child(2) {
+  padding-left: 1px;
+}
+#students .container h3 {
+  font-size: 18px;
+}
+#students .container header {
+  color: black;
+  font-weight: 900;
+  padding-top: 10px;
+}
+#students .container header:last-of-type {
+  padding-top: 40px;
+}
+#how-it-works {
+  background-color: #39bacd;
+  text-align: center;
+}
+#how-it-works * {
+  color: #ffffff;
+}
+#how-it-works header h2 {
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+#how-it-works header p {
+  letter-spacing: 1.5px;
+  font-weight: 100;
+}
+#how-it-works > div {
+  padding-top: 40px;
+}
+#how-it-works > div > div {
+  width: 12.5%;
+  border-bottom: dotted #ffffff 3px;
+  padding-top: 45px;
+}
+#how-it-works > div figure img {
+  width: 90px;
+}
+#how-it-works > div figure h3 {
+  font-size: 18px;
+  font-style: italic;
+  text-transform: none;
+}
+#how-it-works > div figure p {
+  font-size: 14px;
+  font-weight: 100;
+}
+#team {
+  padding-bottom: 0;
+  display: none;
+}
+#team .container {
+  text-align: center;
+}
+#team .container header h2 {
+  font-size: 22px;
+}
+#team .container strong {
+  font-weight: bolder;
+  font-size: 18px;
+}
+#team .container .top :first-child img {
+  margin-left: 0;
+}
+#team .container .top :last-child img {
+  margin-right: 0;
+}
+#team .container .top {
+  padding-top: 30px;
+}
+#team .container .bottom {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#team .container .bottom div:first-child figure {
+  margin-left: 150px;
+}
+#team .container .bottom div:last-child figure {
+  margin-right: 150px;
+}
+#team .container .img-circle {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+}
+#price {
+  background-color: #ffffff;
+  padding: 0;
+  text-align: center;
+}
+#price header h2 {
+  text-align: center;
+  padding: 60px 0 20px;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+#price header > div {
+  color: #39bacd;
+}
+#price header > div .price {
+  font-size: 50px;
+  font-weight: 900;
+  height: 50px;
+  font-family: gibson, sans-serif;
+}
+#price header > div .description {
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 900;
+}
+#price header hr {
+  width: 12%;
+  margin-left: 44%;
+}
+#price hr {
+  width: 80%;
+  margin-left: 10%;
+  height: 1px;
+  background-color: #000000;
+}
+#price section {
+  width: 500px;
+  margin: auto;
+}
+#price section header {
+  font-family: gibson, sans-serif;
+  font-style: italic;
+  font-size: 20px;
+}
+#price section p {
+  font-size: 16px;
+}
+#download h2 {
+  font-size: 22px;
+  text-align: center;
+}
+#download .buttons {
+  font-size: 25px;
+  width: 700px;
+  padding-left: 20px;
+  margin: auto;
+}
+#download .buttons div {
+  float: left;
+  width: 50%;
+}
+#download .buttons div img {
+  height: 80px;
+  margin: auto;
+  display: block;
+}
+#main-footer ul a {
+  color: #000000;
+}
+#main-footer ul li {
+  list-style-type: none;
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+#main-footer .social ul {
+  padding: 0;
+}
+#main-footer .social ul li {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+}
+#main-footer .social ul li:last-of-type {
+  margin-right: 0;
+}
+@media (min-width: 1020px) {
+  #main-footer .social ul li {
+    width: 21%;
+    margin-right: 13%;
+  }
+  #main-footer .social ul li:last-of-type {
+    margin-right: 10%;
+  }
+}
+#main-footer .social ul img {
+  width: 100%;
+}
+#main-footer p {
+  font-size: 16px;
+}
+#main-footer form input {
+  border: none;
+  padding: 10px;
+  float: left;
+  border-radius: 0;
+}
+#main-footer form .email {
+  background-color: #d2d4d3;
+  width: 60%;
+}
+#main-footer form .button {
+  background-color: #39bacd;
+  color: #ffffff;
+  padding: 10px 20px;
+  width: 40%;
+}
+#bottom-footer div {
+  padding: 20px 0;
+}
+#bottom-footer div small {
+  color: #d2d4d3;
+}
+/*
+ *  Media Query Helpers
+ */
+@media (max-width: 1020px) {
+  .hide-sm {
+    display: none;
+  }
+}
+/*
+ * Phone Version
+ */
+#mobile {
+  display: none;
+}
+@media (max-width: 760px) {
+  body {
+    background: none;
+    padding-top: 0;
+  }
+  html {
+    background-image: url('/img/lined-pattern.png');
+  }
+  body > *:not(#mobile) {
+    display: none;
+  }
+  #mobile {
+    display: block!important;
+    padding: 40px;
+  }
+  #mobile img.logo {
+    width: 200px;
+    display: block;
+    margin: auto;
+  }
+  #mobile .middle-line-grey {
+    margin-top: 20px;
+    padding: 20px 0;
+  }
+  #mobile .middle-line-grey p {
+    font-size: 20px;
+    text-align: center;
+    font-family: gibson, sans-serif;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 10px 20px;
+  }
+  #mobile .middle-line-grey .left {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    padding-right: 1px;
+  }
+  #mobile .middle-line-grey .right {
+    width: 49.5%;
+    display: inline-block;
+    padding-left: 1px;
+  }
+  #mobile .middle-line-grey img {
+    width: 100%;
+  }
+}
+iframe.flat {
+  background: none;
+  border: none;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  display: block;
+}

@@ -1,0 +1,5 @@
+{
+  "require": {
+    "plivo/plivo-php": "dev-master"
+  }
+}
