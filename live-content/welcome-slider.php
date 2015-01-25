@@ -6,10 +6,13 @@
                 <h2>Find Your School</h2>
                 <form>
                     <select id="schoolName">
-                        <option value="IDC Herzliya">IDC Herzliya</option>
-                        <option value="UMD University of Maryland">UMD (University of Maryland)</option>
-                        <option value="UNK (University of Nebraska Kearney)">UNK (University of Nebraska Kearney)</option>
+                        <option value="UWO (University of Western Ontario)">UWO (University of Western Ontario)</option>
+                        <option value="UMD (University of Maryland)">UMD (University of Maryland)</option>
+                        <option value="UBC (University of British Columbia)">UBC (University of British Columbia)</option>
+                        <option value="Ryerson University">Ryerson University</option>
                         <option value="KPU (Kwantlen Polytechnic University)">KPU (Kwantlen Polytechnic University)</option>
+                        <option value="UNK (University of Nebraska Kearney)">UNK (University of Nebraska Kearney)</option>
+                        <option value="IDC Herzliya">IDC Herzliya</option>
                     </select>
                 </form>
                 <p class="button my-school hidden">

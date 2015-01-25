@@ -185,7 +185,7 @@ body {
   padding-left: 0;
 }
 #splash .row .col-sm-12 img.button {
-  height: 45px;
+  height: 55px;
   width: auto;
 }
 #splash .row .col-sm-12 a:last-child {
@@ -193,11 +193,11 @@ body {
 }
 #splash div.video {
   position: relative;
-  float: right;
+  padding-bottom: 50px;
 }
 #splash div.video img.screen-shot {
-  height: 500px;
-  margin-top: -50px;
+  width: 300px;
+  margin-top: -85px;
   z-index: 10;
 }
 @media (max-width: 769) {
@@ -207,10 +207,10 @@ body {
   }
 }
 #splash div.video video {
-  width: 215px;
+  width: 261px;
   position: absolute;
-  right: 15px;
-  top: 12px;
+  left: 20px;
+  top: -27px;
   z-index: -1;
   background: none;
 }
@@ -251,6 +251,9 @@ body {
   padding-top: 0;
   width: 100%;
   padding-bottom: 0;
+}
+#students a {
+  color: #39bacd;
 }
 #students p {
   font-size: 16px;
