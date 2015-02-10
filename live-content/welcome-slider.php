@@ -6,17 +6,18 @@
                 <h2>Find Your School</h2>
                 <form>
                     <select id="schoolName">
-                        <option value="UWO (University of Western Ontario)">UWO (University of Western Ontario)</option>
                         <option value="UMD (University of Maryland)">UMD (University of Maryland)</option>
-                        <option value="UBC (University of British Columbia)">UBC (University of British Columbia)</option>
-                        <option value="Ryerson University">Ryerson University</option>
-                        <option value="KPU (Kwantlen Polytechnic University)">KPU (Kwantlen Polytechnic University)</option>
                         <option value="UNK (University of Nebraska Kearney)">UNK (University of Nebraska Kearney)</option>
+                        <option value="RYNJ">RYNJ</option>
+                        <option value="Ryerson University">Ryerson University</option>
+                        <option value="UBC (University of British Columbia)">UBC (University of British Columbia)</option>
+                        <option value="KPU (Kwantlen Polytechnic University)">KPU (Kwantlen Polytechnic University)</option>
                         <option value="IDC Herzliya">IDC Herzliya</option>
+                        <option value="UWO (University of Western Ontario)">UWO (University of Western Ontario)</option>
                     </select>
                 </form>
                 <p class="button my-school hidden">
-                    I go to <i><strong id="school-name"></strong></i>
+                    I go to <br/><i><strong id="school-name"></strong></i>
                 </p>
             </div>
         </div>
@@ -26,6 +27,9 @@
                 <h2>ADD ALL YOUR COURSES</h2>
                 <p>
                     Search by instructor or course name
+                </p>
+                <p>
+                    Tell us if your course isn't there
                 </p>
                 <img src="http://whatsdueapp.com/live-content/assets/onboarding/add-course.png">
                 <p class="button">
@@ -39,6 +43,9 @@
                 <h2>Check What's Due</h2>
                 <p>
                     Swipe stuff away when you finish
+                </p>
+                <p>
+                    Double Tap for more options
                 </p>
                 <img src="http://whatsdueapp.com/live-content/assets/onboarding/swipe-remove.png">
                 <p class="button">
