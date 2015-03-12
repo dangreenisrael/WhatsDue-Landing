@@ -4,6 +4,7 @@
 
 
 $(document).ready(function(){
+
     /*
      *  Smooth Scroll
      */
@@ -80,6 +81,36 @@ $(document).ready(function(){
     });
 
     /*
+     * Form Stuff
+     */
+
+    function submitTeacherForm(){
+        var teacherForm = $('#teacherForm');
+        teacherForm.validate();
+        valid = teacherForm.valid();
+        console.log(valid);
+
+        if (valid){
+            $.ajax({
+                type: "POST",
+                url: "php/form_handler.php",
+                data: teacherForm.serialize(),
+                success: function(response) {
+                    console.log(response);
+                    $('#teacherModal').modal('hide');
+                }
+            });
+        }
+    }
+    $('#teacherSubmit').on('click', submitTeacherForm);
+    $('#teacherForm').on('keypress', function(e) {
+        if(e.which == 13) {
+            submitTeacherForm();
+        }
+    });
+
+
+    /*
      * Header stuff
      */
 
@@ -123,22 +154,3 @@ if($(window).width() <= 768) {
 }
 
 
-/*
- * Phone Stuff
- */
-
-$('.left').on('click',function(){
-    console.log('clicked')
-   window.location = 'http://teachers.whatsdueapp.com';
-});
-//$('.right').on('click', function(){
-    var ua = navigator.userAgent.toLowerCase();
-    var isIphone = ua.indexOf("iphone") > -1;
-    var isIpad = ua.indexOf("ipad") > -1;
-    var isAndroid = ua.indexOf("android") > -1;
-    if(isIphone || isIpad) {
-        window.location='https://itunes.apple.com/us/app/whatsdue-never-miss-another/id924662865';
-    }else if (isAndroid){
-        window.location = 'market://details?id=com.whatsdue.app';
-    }
-//});

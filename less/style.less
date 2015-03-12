@@ -135,11 +135,18 @@
     color: @dark-grey;
     font-style: italic;
   }
+
+  .error{
+    color: firebrick;
+    font-weight: bolder;
+  }
 }
 
 body{
   padding-top: 50px;
 }
+
+
 #top-nav {
   @height: 50px;
   background-color: (@white);
@@ -214,6 +221,7 @@ body{
     font-size: 24px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    font-weight: 900;
   }
   .row {
     .col-sm-12{
@@ -225,6 +233,21 @@ body{
       a:last-child{
         margin-left: 10px;
       }
+    }
+  }
+  .sign-up{
+    width: 355px;
+    p{
+      font-size: 15px;
+      text-align: center;
+    }
+    button{
+      padding: 10px 0;
+      width: 100%;
+      font-size: 25px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      display: inline-block;
     }
   }
   div.video{
@@ -318,7 +341,7 @@ body{
       padding-bottom: 10px;
     }
     h2{
-      font-size: 22px;
+      font-size: 36px;
       color: #000000;
       font-weight: 900;
     }
@@ -638,6 +661,12 @@ body{
   #mobile{
     display: block!important;
     padding: 40px;
+    a{
+      img{
+        width: 100%;
+        padding-top: 50px;
+      }
+    }
     img.logo{
       width: 200px;
       display: block;

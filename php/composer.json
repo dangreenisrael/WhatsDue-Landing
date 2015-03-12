@@ -1,5 +1,6 @@
 {
   "require": {
-    "plivo/plivo-php": "dev-master"
+    "plivo/plivo-php": "dev-master",
+    "mailgun/mailgun-php":"~1.7.2"
   }
 }

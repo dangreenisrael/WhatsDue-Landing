@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
+    <script type="text/javascript">
+        /* Check for mobile */
+        var ua = navigator.userAgent.toLowerCase();
+        var isIphone = ua.indexOf("iphone") > -1;
+        var isIpad = ua.indexOf("ipad") > -1;
+        var isAndroid = ua.indexOf("android") > -1;
+        if(isIphone || isIpad) {
+            window.location="https://itunes.apple.com/us/app/whatsdue-never-miss-another/id924662865"
+        }else if (isAndroid){
+        }
+    </script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>WhatsDue</title>
     <!-- Bootstrap -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Plugins -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"/>
+
 
     <link rel="icon" type="image/png" href="icon.png" />
 
@@ -18,21 +31,12 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css?version=1" rel="stylesheet">
 
-    <script type="text/javascript">
-        /* Check for mobile */
-        var ua = navigator.userAgent.toLowerCase();
-        var isIphone = ua.indexOf("iphone") > -1;
-        var isIpad = ua.indexOf("ipad") > -1;
-        var isAndroid = ua.indexOf("android") > -1;
-        if(isIphone || isIpad) {
-            window.location='https://itunes.apple.com/us/app/whatsdue-never-miss-another/id924662865';
-        }else if (isAndroid){
-            window.location = 'market://details?id=com.whatsdue.app';
-        }
-    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
+    <meta name="google-site-verification" content="aUxuIkKeqLR8bUQiRiAGS0hDckc2lsau_R1Um95tlMM" />
 
     <!-- Social Stuff -->
     <meta property="og:title"
@@ -65,18 +69,40 @@
         </div>
     </header>
     <!-- End Top Nav -->
-    <main>
 
-    <!-- Splash -->
+    <div id="mobile" >
+        <!-- Splash -->
+        <img class="logo" src="/img/logo-text.png">
+
+        <a href="market://details?id=com.whatsdue.app">
+            <img class="button" src="img/google-play-badge.png">
+        </a>
+    </div>
+    <main>
     <section class="row" id="splash">
         <div class="col-sm-7">
             <h1>
                 WhatsDue
             </h1>
             <p>
-                Never Miss A Due Date
+                A simple way for teachers to keep <br>parents and students up to date
             </p>
             <hr>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="sign-up">
+                        <p>
+                            Always free for teachers
+                        </p>
+                        <div class="button">
+                            <button type="button" class="btn  btn-primary" data-toggle="modal" data-target="#teacherModal">
+                                Teacher Sign Up <br/>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-sm-12" id="store-badges">
                     <a href="https://play.google.com/store/apps/details?id=com.whatsdue.app&hl=en">
@@ -87,6 +113,8 @@
                         <img class="button" src="img/app-store-badge.png">
                     </a>
                 </div>
+
+                <!--
                 <div class="col-sm-12">
                     <div class="row">
                         <form action="php/form.php" id="phoneForm" class="form-horizontal" method="post" target="validation-iFrame">
@@ -100,16 +128,17 @@
                                             />
                                     <div class="button">
                                         <button type="submit" class="btn validation-button" disabled="disabled" data-target="#validationModal">
-                                        Text Me
+                                            Text Me
                                         </button>
                                     </div>
                                 </div>
-
                             </div>
 
                         </form>
                     </div>
                 </div>
+                -->
+
             </div>
 
         </div>
@@ -135,12 +164,9 @@
                     <br/>
                 </div>
                 <header>
-                    <h2>
-                        Built For Students
-                    </h2>
-                    <p>
-                        We keep track of your due dates so you don't have to
-                    </p>
+                    <h3>
+                        Built with teachers, parents, and students in mind
+                    </h3>
                 </header>
             </div>
         </div>
@@ -148,19 +174,17 @@
             <div class="col-sm-3 ">
                 <section>
                     <header>
-                        Keep track of everything
+                        Higher Assignment hand-in rates
                     </header>
                     <p>
-                        With all of your important dates in one app, you'll never have to dig through all of your syllabi again.
-
+                        Now that students have a convenient way to check what’s due, more of them will hand in their work on time.
                     </p>
 
                     <header>
-                        Dedicated to students
+                        Save Time
                     </header>
                     <p>
-                        We put all of the major classes at the schools we support in our system.
-                        If you take a class that we don't have, <a href="mailto:aaron@whatsdueapp.com">email us</a> the syllabus and we'll add it.
+                        Instead of getting questions from students about what they have due, they can easily check WhatsDue.
                     </p>
 
                 </section>
@@ -173,17 +197,15 @@
                 <section>
 
                     <header>
-                        Set reminders
+                        Never Miss Another Assignment
                     </header>
                     <p>
-                        WhatsDue will remind you to do everything, all you have to do is tell it when.
-                    </p>
+                        With just a quick glance, you’ll know what you have to submit. Or, have WhatsDue send you reminders!                    </p>
                     <header>
-                        Up to date
+                        Get More Done
                     </header>
                     <p>
-                        We take all the dates from your syllabus.  If there is a change,
-                        <a href="mailto:aaron@whatsdueapp.com">email us</a> and we'll update it.  We'll also send everyone a push notification.
+                        WhatsDue acts like a todo list, so when you finish an assignment, just swipe it off the list. Done!
                     </p>
                 </section>
             </div>
@@ -355,11 +377,6 @@
         </div>
     </footer>
 
-    <div id="mobile" >
-        <img class="logo" src="/img/logo-text.png">
-
-    </div>
-
     <div class="modal fade" id="validationModal" tabindex="-1" role="dialog" aria-labelledby="validationModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -377,14 +394,48 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <div class="modal fade" id="teacherModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">Teacher Sign Up</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="teacherForm">
+                        <div class="form-group">
+                            <label for="teacherName" class="control-label">Your Name:</label>
+                            <input type="text" class="form-control" id="teacherName" name="teacherName" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="teacherSchool" class="control-label">Your School:</label>
+                            <input type="text" class="form-control" id="teacherSchool" name="teacherSchool" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="teacherEmail" class="control-label">Your Email Address:</label>
+                            <input type="email" class="form-control" id="teacherEmail" name="teacherEmail" required="required">
+                        </div>
+                        <input type="hidden" name="type" value="teacherInterest">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-primary" id="teacherSubmit">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>    <!-- Custom JS -->
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js?version=1"></script>
 
     <!-- jQuery Plugins -->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
 
 
     <script>

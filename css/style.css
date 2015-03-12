@@ -100,6 +100,10 @@
     color: #000000;
     font-style: italic;
   }
+  .error {
+    color: firebrick;
+    font-weight: bolder;
+  }
 }
 @media all and (min-width: 1200px) {
   .row .container {
@@ -180,6 +184,7 @@ body {
   font-size: 24px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  font-weight: 900;
 }
 #splash .row .col-sm-12 {
   padding-left: 0;
@@ -190,6 +195,21 @@ body {
 }
 #splash .row .col-sm-12 a:last-child {
   margin-left: 10px;
+}
+#splash .sign-up {
+  width: 355px;
+}
+#splash .sign-up p {
+  font-size: 15px;
+  text-align: center;
+}
+#splash .sign-up button {
+  padding: 10px 0;
+  width: 100%;
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  display: inline-block;
 }
 #splash div.video {
   position: relative;
@@ -279,7 +299,7 @@ body {
   padding-bottom: 10px;
 }
 #students .centered h2 {
-  font-size: 22px;
+  font-size: 36px;
   color: #000000;
   font-weight: 900;
 }
@@ -553,6 +573,10 @@ body {
   #mobile {
     display: block!important;
     padding: 40px;
+  }
+  #mobile a img {
+    width: 100%;
+    padding-top: 50px;
   }
   #mobile img.logo {
     width: 200px;

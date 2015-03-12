@@ -1,4 +1,13 @@
 <?php header('Access-Control-Allow-Origin: *'); ?>
+
+<?php
+    $json = file_get_contents('http://stage.whatsdueapp.com/student/schools');
+    $schools = json_decode($json);
+    $options = "";
+    foreach ($schools->school as $school){
+        $options .= "<option value='$school'>$school</option>\n";
+    }
+?>
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide swiper-no-swiping">
@@ -6,14 +15,7 @@
                 <h2>Find Your School</h2>
                 <form>
                     <select id="schoolName">
-                        <option value="UMD (University of Maryland)">UMD (University of Maryland)</option>
-                        <option value="UNK (University of Nebraska Kearney)">UNK (University of Nebraska Kearney)</option>
-                        <option value="RYNJ">RYNJ</option>
-                        <option value="Ryerson University">Ryerson University</option>
-                        <option value="UBC (University of British Columbia)">UBC (University of British Columbia)</option>
-                        <option value="KPU (Kwantlen Polytechnic University)">KPU (Kwantlen Polytechnic University)</option>
-                        <option value="IDC Herzliya">IDC Herzliya</option>
-                        <option value="UWO (University of Western Ontario)">UWO (University of Western Ontario)</option>
+                        <?php echo $options;?>
                     </select>
                 </form>
                 <p class="button my-school hidden">
