@@ -7,10 +7,10 @@
         var isIphone = ua.indexOf("iphone") > -1;
         var isIpad = ua.indexOf("ipad") > -1;
         var isAndroid = ua.indexOf("android") > -1;
-        if(isIphone || isIpad) {
-            window.location="https://itunes.apple.com/us/app/whatsdue-never-miss-another/id924662865"
-        }else if (isAndroid){
-        }
+//        if(isIphone || isIpad) {
+//            window.location="https://itunes.apple.com/us/app/whatsdue-never-miss-another/id924662865"
+//        }else if (isAndroid){
+//        }
     </script>
 
     <meta charset="utf-8">
@@ -68,16 +68,60 @@
             </nav>
         </div>
     </header>
+
     <!-- End Top Nav -->
-
-    <div id="mobile" >
+    <section id="mobile" >
         <!-- Splash -->
-        <img class="logo" src="/img/logo-text.png">
+        <header>
+            <figure class="logo">
+                <img class="logo" src="/img/logo-symmetrical.png">
+                <figcaption>
+                    <h1>
+                        WhatsDue
+                    </h1>
+                </figcaption>
+            </figure>
+        </header>
 
-        <a href="market://details?id=com.whatsdue.app">
-            <img class="button" src="img/google-play-badge.png">
-        </a>
-    </div>
+
+
+        <figure class="teacher-signup">
+            <!--<a href="http://admin.whatsdueapp.com/register/">-->
+                <!--<div class="btn btn-primary">-->
+                    <!--Teacher Signup-->
+                <!--</div>-->
+            <!--</a>-->
+            <div class="button">
+                <button type="button" class="btn  btn-primary" data-toggle="modal" data-target="#teacherModal">
+                    Teacher Sign Up <br>
+                </button>
+            </div>
+            <figcaption>
+                Always free for teachers
+            </figcaption>
+        </figure>
+
+        <figure class="download">
+            <figcaption>
+                <h2>
+                    Students And Parents
+                </h2>
+                <p>
+                    Got a course code from a teacher?
+                    <br>
+                    Download the app
+                </p>
+            </figcaption>
+            <a href="market://details?id=com.whatsdue.app">
+                <img src="img/google-play-badge.png">
+            </a>
+            <a href="https://itunes.apple.com/us/app/whatsdue-never-miss-another/id924662865">
+                <img src="img/app-store-badge.png">
+            </a>
+        </figure>
+
+    </section>
+
     <main>
     <section class="row" id="splash">
         <div class="col-sm-7">
