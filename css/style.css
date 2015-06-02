@@ -203,13 +203,20 @@ body {
   font-size: 15px;
   text-align: center;
 }
-#splash .sign-up button {
+#splash .sign-up .btn {
   padding: 10px 0;
   width: 100%;
   font-size: 25px;
   font-weight: 900;
   margin-bottom: 20px;
   display: inline-block;
+}
+#splash .sign-up .left {
+  width: 70%;
+}
+#splash .sign-up .right {
+  width: 25%;
+  float: right;
 }
 #splash div.video {
   position: relative;
@@ -423,52 +430,46 @@ body {
   height: 120px;
   margin: auto;
 }
-#price {
+#testimonials {
   background-color: #ffffff;
   padding: 0;
   text-align: center;
+  font-size: 12pt;
 }
-#price header h2 {
+#testimonials section {
+  padding: 20px 60px;
+  max-width: 1100px;
+  margin: auto;
+}
+#testimonials section div {
+  padding: 0 40px;
+}
+#testimonials section div p.quote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.1em;
+  vertical-align: -0.4em;
+  font-family: serif;
+}
+#testimonials section div p.quote:after {
+  color: #ccc;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-left: 0.1em;
+  vertical-align: -0.4em;
+  font-family: serif;
+}
+#testimonials section div strong {
+  font-family: gibson-bold, sans-serif;
+}
+#testimonials header h2 {
   text-align: center;
   padding: 60px 0 20px;
   font-size: 22px;
   letter-spacing: 2px;
-}
-#price header > div {
-  color: #39bacd;
-}
-#price header > div .price {
-  font-size: 50px;
-  font-weight: 900;
-  height: 50px;
-  font-family: gibson, sans-serif;
-}
-#price header > div .description {
-  padding-top: 10px;
-  font-size: 20px;
-  font-weight: 900;
-}
-#price header hr {
-  width: 12%;
-  margin-left: 44%;
-}
-#price hr {
-  width: 80%;
-  margin-left: 10%;
-  height: 1px;
-  background-color: #000000;
-}
-#price section {
-  width: 500px;
-  margin: auto;
-}
-#price section header {
-  font-family: gibson, sans-serif;
-  font-style: italic;
-  font-size: 20px;
-}
-#price section p {
-  font-size: 16px;
 }
 #download h2 {
   font-size: 22px;
@@ -582,18 +583,36 @@ body {
     text-align: center;
     text-transform: none;
   }
+  #mobile figure.logo figcaption p {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
   #mobile figure.teacher-signup {
     margin-top: 10px;
   }
-  #mobile figure.teacher-signup .btn {
+  #mobile figure.teacher-signup div {
+    max-width: 400px;
+    margin: auto;
+  }
+  #mobile figure.teacher-signup div .btn {
     padding: 10px 30px;
     font-size: 20px;
-    display: block;
-    margin: auto;
-    width: 200px;
+    display: inline-block;
     font-weight: 900;
   }
+  #mobile figure.teacher-signup div .btn.left {
+    width: 60%;
+    float: left;
+  }
+  #mobile figure.teacher-signup div .btn.right {
+    width: 35%;
+    float: right;
+    color: #39bacd;
+    border: solid #39bacd 2px;
+  }
   #mobile figure.teacher-signup figcaption {
+    clear: both;
     text-align: center;
     font-size: 16px;
     margin-top: 5px;
@@ -611,8 +630,13 @@ body {
   }
   #mobile figure.download img {
     width: 200px;
-    display: block;
     margin: 10px auto;
+  }
+  #mobile figure.download .android {
+    width: 46.5%;
+  }
+  #mobile figure.download .ios {
+    width: 52.5%;
   }
 }
 iframe.flat {

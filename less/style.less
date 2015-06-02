@@ -241,7 +241,7 @@ body{
       font-size: 15px;
       text-align: center;
     }
-    button{
+    .btn{
       padding: 10px 0;
       width: 100%;
       font-size: 25px;
@@ -249,6 +249,14 @@ body{
       margin-bottom: 20px;
       display: inline-block;
     }
+    .left{
+      width: 70%;
+    }
+    .right{
+      width: 25%;
+      float: right;
+    }
+
   }
   div.video{
     position: relative;
@@ -488,10 +496,42 @@ body{
   }
 }
 
-#price{
+#testimonials{
   background-color: #ffffff;
   padding: 0;
   text-align: center;
+  font-size: 12pt;
+  section{
+    padding: 20px 60px;
+    max-width: 1100px;
+    margin: auto;
+    div{
+      padding: 0 40px;
+      p.quote:before{
+        color: #ccc;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.1em;
+        vertical-align: -0.4em;
+        font-family: serif;
+      }
+      p.quote:after{
+        color: #ccc;
+        content: close-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-left: 0.1em;
+        vertical-align: -0.4em;
+        font-family: serif;
+      }
+      strong{
+        font-family: gibson-bold, sans-serif;
+      }
+    }
+
+  }
+
   header{
     h2{
       text-align: center;
@@ -499,43 +539,8 @@ body{
       font-size: 22px;
       letter-spacing: 2px;
     }
-    >div{
-      color: @blue;
-      .price{
-        font-size: 50px;
-        font-weight: 900;
-        height: 50px;
-        font-family: gibson, sans-serif;
-      }
-      .description{
-        padding-top: 10px;
-        font-size: 20px;
-        font-weight: 900;
-      }
-    }
-    hr{
-      width: 12%;
-      margin-left: 44%;
-    }
   }
-  hr{
-    width: 80%;
-    margin-left: 10%;
-    height: 1px;
-    background-color: @dark-grey;
-  }
-  section{
-    width: 500px;
-    margin: auto;
-    header{
-      font-family: gibson, sans-serif;
-      font-style: italic;
-      font-size: 20px;
-    }
-    p{
-      font-size: 16px;
-    }
-  }
+
 }
 
 #download{
@@ -671,20 +676,40 @@ body{
           text-align: center;
           text-transform: none;
         }
+        p{
+          font-size: 16px;
+          text-align: center;
+          margin-bottom: 20px
+        }
       }
     }
 
     figure.teacher-signup {
       margin-top:10px;
-      .btn {
-        padding: 10px 30px;
-        font-size: 20px;
-        display: block;
+      div{
+        max-width: 400px;
         margin: auto;
-        width: 200px;
-        font-weight: 900;
+        .btn {
+          padding: 10px 30px;
+          font-size: 20px;
+          display: inline-block;
+          font-weight: 900;
+        }
+        .btn.left{
+          width: 60%;
+          float: left;
+        }
+        .btn.right{
+          width: 35%;
+          float: right;
+          color: @blue;
+          border: solid @blue 2px;
+        }
       }
+
+
       figcaption {
+        clear: both;
         text-align: center;
         font-size: 16px;
         margin-top: 5px;
@@ -704,9 +729,15 @@ body{
       }
       img{
         width: 200px;
-        display: block;
         margin: 10px auto;
       }
+      .android{
+        width: 46.5%;
+      }
+      .ios{
+        width: 52.5%;
+      }
+
     }
   }
 }
